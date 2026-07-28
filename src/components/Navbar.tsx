@@ -116,7 +116,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-white/20 bg-white/95 backdrop-blur-md px-4 pb-6 pt-2 lg:hidden">
+        <div className="border-t border-white/20 bg-white/95 backdrop-blur-md px-4 pb-6 pt-2 lg:hidden max-h-[80vh] overflow-y-auto">
           {navItems.map((item) => (
             <div key={item.label}>
               <Link
