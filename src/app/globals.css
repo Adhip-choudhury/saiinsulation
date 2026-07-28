@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-orange: #E85D21;
+  --color-orange-dark: #D04A14;
+  --color-blue: #007AFF;
+  --color-blue-dark: #0066D6;
+  --color-whatsapp: #25D366;
+  --color-dark: #111827;
+  --color-dark-alt: #1F2937;
+  --color-gray-text: #6B7280;
+  --color-gray-light: #F3F4F6;
+  --font-sans: "Montserrat", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #1A1A1A;
+  font-family: "Montserrat", sans-serif;
+}
