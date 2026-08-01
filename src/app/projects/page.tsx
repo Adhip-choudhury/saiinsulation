@@ -3,12 +3,12 @@ import Link from "next/link";
 const categories = ["All", "Commercial", "Educational", "Healthcare", "Residential", "Industrial"];
 
 const projects = [
-  { title: "Industrial Insulation Project", category: "Industrial", desc: "Comprehensive thermal insulation for large-scale industrial facility." },
-  { title: "Commercial HVAC System", category: "Commercial", desc: "HVAC ducting and cold insulation for commercial complex." },
-  { title: "Hospital Clean Rooms", category: "Healthcare", desc: "Clean room insulation panels for healthcare facility." },
-  { title: "Educational Building", category: "Educational", desc: "Acoustic insulation and false ceiling for educational institution." },
-  { title: "Residential Complex", category: "Residential", desc: "Thermal insulation and PUF panels for residential development." },
-  { title: "Manufacturing Plant", category: "Industrial", desc: "Hot insulation with cladding for manufacturing plant piping." },
+  { title: "Industrial Insulation Project", category: "Industrial", desc: "Comprehensive thermal insulation for large-scale industrial facility.", image: "/gallery/photo-1.jpeg" },
+  { title: "Commercial HVAC System", category: "Commercial", desc: "HVAC ducting and cold insulation for commercial complex.", image: "/gallery/photo-2.jpeg" },
+  { title: "Hospital Clean Rooms", category: "Healthcare", desc: "Clean room insulation panels for healthcare facility.", image: "/gallery/photo-3.jpeg" },
+  { title: "Educational Building", category: "Educational", desc: "Acoustic insulation and false ceiling for educational institution.", image: "/gallery/photo-4.jpeg" },
+  { title: "Residential Complex", category: "Residential", desc: "Thermal insulation and PUF panels for residential development.", image: "/gallery/photo-5.jpeg" },
+  { title: "Manufacturing Plant", category: "Industrial", desc: "Hot insulation with cladding for manufacturing plant piping.", image: "/gallery/photo-6.jpeg" },
 ];
 
 export default function ProjectsPage() {
@@ -52,8 +52,13 @@ export default function ProjectsPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((p, i) => (
               <div key={i} className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md">
-                <div className="flex aspect-[16/10] items-center justify-center bg-gray-100">
-                  <span className="text-4xl text-gray-300">📷</span>
+                <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gray-100">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
                 <div className="p-5">
                   <span className={`mb-2 inline-block rounded px-2.5 py-0.5 text-xs font-semibold ${

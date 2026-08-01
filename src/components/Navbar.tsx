@@ -48,6 +48,7 @@ const navItems = [
     ],
   },
   { label: "INSUDESIGN", href: "/insudesign" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
