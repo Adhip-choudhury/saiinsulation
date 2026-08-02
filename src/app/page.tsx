@@ -126,6 +126,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <h2 className="mb-4 text-center text-3xl font-bold text-dark">
+            Our <span className="text-orange">Gallery</span>
+          </h2>
+          <p className="mb-12 text-center text-gray-text">Explore our latest projects and installations</p>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {[
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (1).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (2).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (3).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (4).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (5).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (6).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (7).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50.jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.35.34.jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (1).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (2).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (3).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (4).jpeg",
+              "/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35.jpeg",
+            ].map((src, index) => (
+              <a
+                key={index}
+                href={src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square"
+              >
+                <img
+                  src={src}
+                  alt={`Gallery image ${index + 1}`}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </a>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/gallery"
+              className="inline-block rounded bg-orange px-8 py-3.5 font-bold uppercase text-black transition-all hover:bg-orange-dark hover:scale-105"
+            >
+              View Full Gallery &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* About Preview */}
       <section className="py-20 lg:py-28" style={{ background: "linear-gradient(135deg, #FFF5F5 0%, #F0F7FF 100%)" }}>
         <div className="mx-auto max-w-7xl px-4 lg:px-8">

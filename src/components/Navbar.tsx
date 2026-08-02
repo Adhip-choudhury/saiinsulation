@@ -47,8 +47,8 @@ const navItems = [
       { label: "Industrial", href: "/projects?category=industrial" },
     ],
   },
-  { label: "INSUDESIGN", href: "/insudesign" },
   { label: "Gallery", href: "/gallery" },
+  { label: "INSUDESIGN", href: "/insudesign" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
