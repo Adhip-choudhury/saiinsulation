@@ -7,63 +7,113 @@
   <meta name="description" content="ISO 9001:2008 Certified. 42+ years of expertise in thermal insulation, acoustic solutions, civil works, and AMC contracts across India." />
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/icon-192.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            dark: '#1a1a2e',
-            orange: '#f97316',
-            'orange-dark': '#ea580c',
-            blue: '#3b82f6',
-            'blue-dark': '#2563eb',
-            gray: '#6b7280',
-            'gray-text': '#6b7280',
-            'dark-alt': '#16213e',
-          },
-          fontFamily: {
-            sans: ['Montserrat', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
   <style>
-    body { font-family: 'Montserrat', system-ui, sans-serif; }
-    .bg-dark { background-color: #1a1a2e; }
-    .bg-dark-alt { background-color: #16213e; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', system-ui, sans-serif; line-height: 1.6; color: #1a1a2e; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 80rem; margin: 0 auto; padding: 0 1rem; }
+    .container-lg { padding: 0 2rem; }
+    .text-center { text-align: center; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-10 { margin-bottom: 2.5rem; }
+    .mb-12 { margin-bottom: 3rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-8 { margin-top: 2rem; }
+    .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+    .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+    .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+    .bg-dark { background-color: #1a1a2e; color: #fff; }
+    .bg-gray-50 { background-color: #f9fafb; }
     .bg-orange { background-color: #f97316; }
-    .bg-orange-dark { background-color: #ea580c; }
     .bg-blue { background-color: #3b82f6; }
-    .text-dark { color: #1a1a2e; }
     .text-orange { color: #f97316; }
     .text-blue { color: #3b82f6; }
-    .text-gray-text { color: #6b7280; }
+    .text-white { color: #fff; }
+    .text-dark { color: #1a1a2e; }
     .text-gray-300 { color: #d1d5db; }
     .text-gray-400 { color: #9ca3af; }
-    .text-gray-500 { color: #6b7280; }
-    .text-white { color: #ffffff; }
-    .text-black { color: #000000; }
-    .border-orange { border-color: #f97316; }
-    .border-blue { border-color: #3b82f6; }
+    .text-gray-text { color: #6b7280; }
+    .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+    .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+    .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+    .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+    .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .text-5xl { font-size: 3rem; line-height: 1; }
+    .font-bold { font-weight: 700; }
+    .font-semibold { font-weight: 600; }
+    .uppercase { text-transform: uppercase; }
+    .leading-relaxed { line-height: 1.625; }
+    .leading-tight { line-height: 1.25; }
+    .rounded { border-radius: 0.25rem; }
+    .rounded-lg { border-radius: 0.5rem; }
+    .rounded-full { border-radius: 9999px; }
+    .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .py-3\.5 { padding-top: 0.875rem; padding-bottom: 0.875rem; }
+    .grid { display: grid; }
+    .grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+    .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+    .gap-12 { gap: 3rem; }
+    .flex { display: flex; }
+    .flex-wrap { flex-wrap: wrap; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+    .relative { position: relative; }
+    .overflow-hidden { overflow: hidden; }
+    .bg-cover { background-size: cover; }
+    .bg-center { background-position: center; }
+    .bg-no-repeat { background-repeat: no-repeat; }
+    .bg-gradient-to-br { background-image: linear-gradient(to bottom right, rgba(26,26,46,0.9), rgba(26,26,46,0.75), rgba(26,26,46,0.9)); }
+    .bg-gradient-to-t { background-image: linear-gradient(to top, rgba(26,26,46,0.5), transparent); }
+    .bg-gradient-to-r { background-image: linear-gradient(to right, rgba(26,26,46,0.95), rgba(26,26,46,0.8), rgba(26,26,46,0.95)); }
+    .from-dark\/90 { --tw-from: rgba(26,26,46,0.9); }
+    .via-dark\/75 { --tw-via: rgba(26,26,46,0.75); }
+    .via-dark\/50 { --tw-via: rgba(26,26,46,0.5); }
+    .to-transparent { --tw-to: transparent; }
+    .to-dark\/95 { --tw-to: rgba(26,26,46,0.95); }
+    .to-dark\/80 { --tw-to: rgba(26,26,46,0.8); }
+    .via-dark\/95 { --tw-via: rgba(26,26,46,0.95); }
+    .via-dark\/80 { --tw-via: rgba(26,26,46,0.8); }
+    .border { border-width: 1px; }
+    .border-2 { border-width: 2px; }
+    .border-l-4 { border-left-width: 4px; }
+    .border-t { border-top-width: 1px; }
     .border-orange\/30 { border-color: rgba(249,115,22,0.3); }
     .border-blue\/30 { border-color: rgba(59,130,246,0.3); }
     .border-white\/20 { border-color: rgba(255,255,255,0.2); }
+    .border-gray-200 { border-color: #e5e7eb; }
+    .bg-white { background-color: #fff; }
     .bg-white\/80 { background-color: rgba(255,255,255,0.8); }
     .bg-white\/95 { background-color: rgba(255,255,255,0.95); }
-    .bg-white\/90 { background-color: rgba(255,255,255,0.9); }
-    .backdrop-blur-lg { backdrop-filter: blur(16px); }
-    .backdrop-blur-md { backdrop-filter: blur(12px); }
-    .backdrop-blur-sm { backdrop-filter: blur(4px); }
+    .bg-gray-100 { background-color: #f3f4f6; }
+    .bg-gray-50 { background-color: #f9fafb; }
+    .bg-gray-700 { background-color: #374151; }
+    .bg-gray-900\/50 { background-color: rgba(17,24,39,0.5); }
+    .bg-orange\/20 { background-color: rgba(249,115,22,0.2); }
+    .bg-blue\/20 { background-color: rgba(59,130,246,0.2); }
+    .bg-dark\/50 { background-color: rgba(26,26,46,0.5); }
+    .bg-dark\/75 { background-color: rgba(26,26,46,0.75); }
+    .bg-dark\/90 { background-color: rgba(26,26,46,0.9); }
+    .bg-dark\/95 { background-color: rgba(26,26,46,0.95); }
+    .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
     .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
     .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
-    .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
-    .shadow-orange\/30 { --tw-shadow-color: rgba(249,115,22,0.3); }
-    .shadow-orange\/40 { --tw-shadow-color: rgba(249,115,22,0.4); }
+    .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
     .hover\:bg-orange\/10:hover { background-color: rgba(249,115,22,0.1); }
     .hover\:bg-blue\/10:hover { background-color: rgba(59,130,246,0.1); }
-    .hover\:bg-blue\/70:hover { background-color: rgba(59,130,246,0.7); }
     .hover\:bg-orange-dark:hover { background-color: #ea580c; }
     .hover\:bg-blue:hover { background-color: #3b82f6; }
     .hover\:text-orange:hover { color: #f97316; }
@@ -72,197 +122,147 @@
     .hover\:shadow-md:hover { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); }
     .hover\:shadow-lg:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
     .hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
-    .hover\:shadow-orange\/40:hover { --tw-shadow-color: rgba(249,115,22,0.4); }
-    .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4,0,0.2,1); transition-duration: 150ms; }
-    .transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4,0,0.2,1); transition-duration: 300ms; }
-    .transition-colors { transition-property: color, background-color, border-color; transition-timing-function: cubic-bezier(0.4,0,0.2,1); transition-duration: 150ms; }
+    .hover\:shadow-orange\/40:hover { box-shadow: 0 20px 25px -5px rgba(249,115,22,0.4), 0 10px 10px -5px rgba(249,115,22,0.3); }
+    .hover\:text-white:hover { color: #fff; }
+    .transition-all { transition: all 0.15s ease; }
+    .transition-transform { transition: transform 0.3s ease; }
     .duration-300 { transition-duration: 300ms; }
     .duration-500 { transition-duration: 500ms; }
     .ease-in-out { transition-timing-function: cubic-bezier(0.4,0,0.2,1); }
-    .rounded { border-radius: 0.25rem; }
-    .rounded-lg { border-radius: 0.5rem; }
-    .rounded-xl { border-radius: 0.75rem; }
-    .rounded-full { border-radius: 9999px; }
-    .flex { display: flex; }
-    .hidden { display: none; }
-    .grid { display: grid; }
-    .block { display: block; }
-    .inline-block { display: inline-block; }
-    .relative { position: relative; }
-    .absolute { position: absolute; }
-    .fixed { position: fixed; }
-    .top-0 { top: 0; }
-    .left-0 { left: 0; }
-    .right-0 { right: 0; }
-    .z-50 { z-index: 50; }
-    .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
-    .mx-auto { margin-left: auto; margin-right: auto; }
-    .mt-2 { margin-top: 0.5rem; }
-    .mt-4 { margin-top: 1rem; }
-    .mt-6 { margin-top: 1.5rem; }
-    .mt-8 { margin-top: 2rem; }
-    .mb-2 { margin-bottom: 0.5rem; }
-    .mb-3 { margin-bottom: 0.75rem; }
-    .mb-4 { margin-bottom: 1rem; }
-    .mb-6 { margin-bottom: 1.5rem; }
-    .mb-8 { margin-bottom: 2rem; }
-    .mb-10 { margin-bottom: 2.5rem; }
-    .mb-12 { margin-bottom: 3rem; }
-    .ml-4 { margin-left: 1rem; }
-    .ml-6 { margin-left: 1.5rem; }
-    .p-2 { padding: 0.5rem; }
-    .p-3 { padding: 0.75rem; }
-    .p-4 { padding: 1rem; }
-    .p-6 { padding: 1.5rem; }
-    .p-8 { padding: 2rem; }
-    .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
-    .px-4 { padding-left: 1rem; padding-right: 1rem; }
-    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-    .px-8 { padding-left: 2rem; padding-right: 2rem; }
-    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-    .py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
-    .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-    .py-3\.5 { padding-top: 0.875rem; padding-bottom: 0.875rem; }
-    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-    .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-    .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
-    .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
-    .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-    .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
-    .py-28 { padding-top: 7rem; padding-bottom: 7rem; }
-    .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-    .pt-2 { padding-top: 0.5rem; }
-    .pt-6 { padding-top: 1.5rem; }
-    .pb-6 { padding-bottom: 1.5rem; }
-    .pl-3 { padding-left: 0.75rem; }
-    .pl-4 { padding-left: 1rem; }
-    .pr-3 { padding-right: 0.75rem; }
-    .pr-4 { padding-right: 1rem; }
-    .text-center { text-align: center; }
-    .text-left { text-align: left; }
-    .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
-    .text-xs { font-size: 0.75rem; line-height: 1rem; }
-    .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
-    .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
-    .text-2xl { font-size: 1.5rem; line-height: 2rem; }
-    .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-    .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-    .text-5xl { font-size: 3rem; line-height: 1; }
-    .text-6xl { font-size: 3.75rem; line-height: 1; }
-    .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
-    .font-bold { font-weight: 700; }
-    .font-semibold { font-weight: 600; }
-    .font-extrabold { font-weight: 800; }
-    .uppercase { text-transform: uppercase; }
-    .italic { font-style: italic; }
-    .leading-relaxed { line-height: 1.625; }
-    .leading-tight { line-height: 1.25; }
-    .tracking-wider { letter-spacing: 0.05em; }
-    .max-w-7xl { max-width: 80rem; }
-    .max-w-3xl { max-width: 48rem; }
-    .max-w-2xl { max-width: 42rem; }
-    .max-w-sm { max-width: 24rem; }
-    .w-full { width: 100%; }
-    .h-6 { height: 1.5rem; }
-    .h-10 { height: 2.5rem; }
-    .h-16 { height: 4rem; }
-    .h-20 { height: 5rem; }
-    .h-24 { height: 6rem; }
-    .h-32 { height: 8rem; }
-    .h-40 { height: 10rem; }
-    .h-48 { height: 12rem; }
-    .h-56 { height: 14rem; }
-    .h-64 { height: 16rem; }
-    .h-80 { height: 20rem; }
-    .h-96 { height: 24rem; }
-    .h-full { height: 100%; }
-    .w-6 { width: 1.5rem; }
-    .w-10 { width: 2.5rem; }
-    .w-16 { width: 4rem; }
-    .w-20 { width: 5rem; }
-    .w-24 { width: 6rem; }
-    .w-32 { width: 8rem; }
-    .w-40 { width: 10rem; }
-    .w-48 { width: 12rem; }
-    .w-56 { width: 14rem; }
-    .w-64 { width: 16rem; }
-    .w-80 { width: 20rem; }
-    .w-96 { width: 24rem; }
-    .min-h-\[90vh\] { min-height: 90vh; }
-    .min-h-screen { min-height: 100vh; }
-    .min-h-full { min-height: 100%; }
-    .flex-1 { flex: 1 1 0%; }
-    .flex-wrap { flex-wrap: wrap; }
-    .flex-col { flex-direction: column; }
-    .flex-row { flex-direction: row; }
-    .items-center { align-items: center; }
-    .items-start { align-items: flex-start; }
-    .justify-center { justify-content: center; }
-    .justify-between { justify-content: space-between; }
-    .justify-end { justify-content: flex-end; }
-    .gap-2 { gap: 0.5rem; }
-    .gap-3 { gap: 0.75rem; }
-    .gap-4 { gap: 1rem; }
-    .gap-6 { gap: 1.5rem; }
-    .gap-8 { gap: 2rem; }
-    .gap-12 { gap: 3rem; }
-    .space-y-2 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(0.5rem * var(--tw-space-y-reverse)); }
-    .space-y-4 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(1rem * var(--tw-space-y-reverse)); }
-    .space-y-6 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse))); margin-bottom: calc(1.5rem * var(--tw-space-y-reverse)); }
-    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-    .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-    .col-span-2 { grid-column: span 2 / span 2; }
-    .col-span-3 { grid-column: span 3 / span 3; }
-    .row-span-2 { grid-row: span 2 / span 2; }
-    .border { border-width: 1px; }
-    .border-2 { border-width: 2px; }
-    .border-l-4 { border-left-width: 4px; }
-    .border-t { border-top-width: 1px; }
-    .border-b { border-bottom-width: 1px; }
-    .border-gray-200 { border-color: #e5e7eb; }
-    .border-gray-300 { border-color: #d1d5db; }
     .rounded-t-lg { border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem; }
-    .overflow-hidden { overflow: hidden; }
-    .overflow-y-auto { overflow-y: auto; }
-    .overflow-x-hidden { overflow-x: hidden; }
-    .object-cover { object-fit: cover; }
-    .object-center { object-position: center; }
-    .bg-cover { background-size: cover; }
-    .bg-center { background-position: center; }
-    .bg-no-repeat { background-repeat: no-repeat; }
-    .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
-    .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
-    .bg-gradient-to-t { background-image: linear-gradient(to top, var(--tw-gradient-stops)); }
-    .from-dark\/90 { --tw-gradient-from: rgba(26,26,46,0.9); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(26,26,46,0)); }
-    .via-dark\/75 { --tw-gradient-via: rgba(26,26,46,0.75); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to, rgba(26,26,46,0)); }
-    .via-dark\/50 { --tw-gradient-via: rgba(26,26,46,0.5); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to, rgba(26,26,46,0)); }
-    .to-transparent { --tw-gradient-to: transparent; }
-    .to-dark\/95 { --tw-gradient-to: rgba(26,26,46,0.95); }
-    .to-dark\/80 { --tw-gradient-to: rgba(26,26,46,0.8); }
-    .via-dark\/95 { --tw-gradient-via: rgba(26,26,46,0.95); }
-    .via-dark\/80 { --tw-gradient-via: rgba(26,26,46,0.8); }
-    .bg-gray-100 { background-color: #f3f4f6; }
-    .bg-gray-200 { background-color: #e5e7eb; }
-    .bg-gray-50 { background-color: #f9fafb; }
-    .bg-gray-700 { background-color: #374151; }
-    .bg-gray-900\/50 { background-color: rgba(17,24,39,0.5); }
-    .bg-opacity-50 { --tw-bg-opacity: 0.5; }
-    .bg-white { background-color: #ffffff; }
-    .bg-black\/0 { background-color: rgba(0,0,0,0); }
-    .bg-black\/10 { background-color: rgba(0,0,0,0.1); }
-    .bg-orange\/20 { background-color: rgba(249,115,22,0.2); }
-    .bg-blue\/20 { background-color: rgba(59,130,246,0.2); }
-    .bg-dark\/50 { background-color: rgba(26,26,46,0.5); }
-    .bg-dark\/75 { background-color: rgba(26,26,46,0.75); }
-    .bg-dark\/90 { background-color: rgba(26,26,46,0.9); }
-    .bg-dark\/95 { background-color: rgba(26,26,46,0.95); }
-    .text-shadow-lg { text-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
-    .drop-shadow-lg { filter: drop-shadow(0 10px 8px rgba(0,0,0,0.04)); }
     .aspect-square { aspect-ratio: 1 / 1; }
     .aspect-\[16\/10\] { aspect-ratio: 16 / 10; }
+    .object-cover { object-fit: cover; }
+    .w-full { width: 100%; }
+    .h-full { height: 100%; }
+    .h-10 { height: 2.5rem; }
+    .h-6 { height: 1.5rem; }
+    .w-6 { width: 1.5rem; }
+    .w-10 { width: 2.5rem; }
+    .min-h-\[90vh\] { min-height: 90vh; }
+    .min-h-screen { min-height: 100vh; }
+    .flex-1 { flex: 1 1 0%; }
+    .flex-col { flex-direction: column; }
+    .items-start { align-items: flex-start; }
+    .justify-start { justify-content: flex-start; }
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .md\:flex { display: flex; }
+    .md\:hidden { display: none; }
+    .md\:w-1\/2 { width: 50%; }
+    .md\:w-2\/3 { width: 66.666667%; }
+    .md\:w-full { width: 100%; }
+    .md\:flex-row { flex-direction: row; }
+    .md\:items-center { align-items: center; }
+    .md\:justify-start { justify-content: flex-start; }
+    .md\:justify-center { justify-content: center; }
+    .md\:justify-between { justify-content: space-between; }
+    .md\:gap-6 { gap: 1.5rem; }
+    .md\:gap-8 { gap: 2rem; }
+    .md\:p-6 { padding: 1.5rem; }
+    .md\:p-8 { padding: 2rem; }
+    .md\:px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .md\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .md\:py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+    .md\:py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+    .md\:py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+    .md\:text-left { text-align: left; }
+    .md\:text-center { text-align: center; }
+    .md\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+    .md\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .md\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .md\:text-5xl { font-size: 3rem; line-height: 1; }
+    .md\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+    .md\:font-bold { font-weight: 700; }
+    .md\:font-semibold { font-weight: 600; }
+    .md\:leading-relaxed { line-height: 1.625; }
+    .md\:leading-tight { line-height: 1.25; }
+    .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .lg\:grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+    .lg\:flex { display: flex; }
+    .lg\:hidden { display: none; }
+    .lg\:w-1\/3 { width: 33.333333%; }
+    .lg\:w-1\/2 { width: 50%; }
+    .lg\:w-2\/3 { width: 66.666667%; }
+    .lg\:w-full { width: 100%; }
+    .lg\:flex-row { flex-direction: row; }
+    .lg\:flex-col { flex-direction: column; }
+    .lg\:items-center { align-items: center; }
+    .lg\:justify-start { justify-content: flex-start; }
+    .lg\:justify-center { justify-content: center; }
+    .lg\:justify-between { justify-content: space-between; }
+    .lg\:gap-8 { gap: 2rem; }
+    .lg\:gap-12 { gap: 3rem; }
+    .lg\:p-8 { padding: 2rem; }
+    .lg\:px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .lg\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+    .lg\:py-28 { padding-top: 7rem; padding-bottom: 7rem; }
+    .lg\:py-32 { padding-top: 8rem; padding-bottom: 8rem; }
+    .lg\:text-left { text-align: left; }
+    .lg\:text-center { text-align: center; }
+    .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .lg\:text-5xl { font-size: 3rem; line-height: 1; }
+    .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
+    .lg\:font-bold { font-weight: 700; }
+    .lg\:font-semibold { font-weight: 600; }
+    .xl\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .xl\:grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+    .xl\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .xl\:flex { display: flex; }
+    .xl\:hidden { display: none; }
+    .xl\:w-1\/3 { width: 33.333333%; }
+    .xl\:w-1\/2 { width: 50%; }
+    .xl\:w-2\/3 { width: 66.666667%; }
+    .xl\:w-full { width: 100%; }
+    .xl\:flex-row { flex-direction: row; }
+    .xl\:flex-col { flex-direction: column; }
+    .xl\:items-center { align-items: center; }
+    .xl\:justify-start { justify-content: flex-start; }
+    .xl\:justify-center { justify-content: center; }
+    .xl\:justify-between { justify-content: space-between; }
+    .xl\:gap-8 { gap: 2rem; }
+    .xl\:gap-12 { gap: 3rem; }
+    .xl\:p-8 { padding: 2rem; }
+    .xl\:px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .xl\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .xl\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+    .xl\:py-28 { padding-top: 7rem; padding-bottom: 7rem; }
+    .xl\:py-32 { padding-top: 8rem; padding-bottom: 8rem; }
+    .xl\:text-left { text-align: left; }
+    .xl\:text-center { text-align: center; }
+    .xl\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .xl\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .xl\:text-5xl { font-size: 3rem; line-height: 1; }
+    .xl\:text-6xl { font-size: 3.75rem; line-height: 1; }
+    .xl\:font-bold { font-weight: 700; }
+    .xl\:font-semibold { font-weight: 600; }
+    .sm\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .sm\:text-left { text-align: left; }
+    .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+    .col-span-2 { grid-column: span 2 / span 2; }
+    .col-span-3 { grid-column: span 3 / span 3; }
+    .space-y-6 > :not([hidden]) ~ :not([hidden]) { margin-top: 1.5rem; }
+    .space-y-4 > :not([hidden]) ~ :not([hidden]) { margin-top: 1rem; }
+    .space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.5rem; }
+    .border-gray-300 { border-color: #d1d5db; }
+    .focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
+    .focus\:ring-2:focus { box-shadow: 0 0 0 2px rgba(59,130,246,0.5); }
+    .focus\:ring-orange:focus { box-shadow: 0 0 0 2px rgba(249,115,22,0.5); }
+    .focus\:ring-blue:focus { box-shadow: 0 0 0 2px rgba(59,130,246,0.5); }
+    .focus\:border-orange:focus { border-color: #f97316; }
+    .focus\:border-blue:focus { border-color: #3b82f6; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+    .not-sr-only { position: static; width: auto; height: auto; padding: 0; margin: 0; overflow: visible; clip: auto; white-space: normal; }
+    .italic { font-style: italic; }
+    .font-extrabold { font-weight: 800; }
+    .tracking-wider { letter-spacing: 0.05em; }
+    .drop-shadow-lg { filter: drop-shadow(0 10px 8px rgba(0,0,0,0.04)); }
+    .bg-opacity-50 { opacity: 0.5; }
     .group:hover .group-hover\:scale-105 { transform: scale(1.05); }
     .group:hover .group-hover\:scale-110 { transform: scale(1.1); }
     .group:hover .group-hover\:shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
@@ -277,7 +277,6 @@
     .cursor-pointer { cursor: pointer; }
     .pointer-events-none { pointer-events: none; }
     .select-none { user-select: none; }
-    .resize { resize: both; }
     .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .break-words { word-break: break-word; }
     .list-none { list-style-type: none; }
@@ -289,11 +288,11 @@
     .opacity-50 { opacity: 0.5; }
     .visible { visibility: visible; }
     .invisible { visibility: hidden; }
+    .z-50 { z-index: 50; }
     .z-10 { z-index: 10; }
     .z-20 { z-index: 20; }
     .z-30 { z-index: 30; }
     .z-40 { z-index: 40; }
-    .z-50 { z-index: 50; }
     .z-auto { z-index: auto; }
     .static { position: static; }
     .sticky { position: sticky; }
@@ -326,140 +325,18 @@
     .empty\:hidden:empty { display: none; }
     .first\:mt-0:first-child { margin-top: 0; }
     .last\:mb-0:last-child { margin-bottom: 0; }
-    .odd\:bg-white:nth-child(odd) { background-color: #ffffff; }
+    .odd\:bg-white:nth-child(odd) { background-color: #fff; }
     .even\:bg-gray-50:nth-child(even) { background-color: #f9fafb; }
-    .focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
-    .focus\:ring-2:focus { --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color); --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-space) var(--tw-ring-color); box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000); }
-    .focus\:ring-orange:focus { --tw-ring-color: #f97316; }
-    .focus\:ring-blue:focus { --tw-ring-color: #3b82f6; }
-    .focus\:border-orange:focus { border-color: #f97316; }
-    .focus\:border-blue:focus { border-color: #3b82f6; }
     .disabled\:opacity-50:disabled { opacity: 0.5; }
     .disabled\:cursor-not-allowed:disabled { cursor: not-allowed; }
-    @media (min-width: 640px) {
-      .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .sm\:text-left { text-align: left; }
-      .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-    }
-    @media (min-width: 768px) {
-      .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .md\:flex { display: flex; }
-      .md\:hidden { display: none; }
-      .md\:w-1\/2 { width: 50%; }
-      .md\:w-2\/3 { width: 66.666667%; }
-      .md\:w-3\/4 { width: 75%; }
-      .md\:w-full { width: 100%; }
-      .md\:flex-row { flex-direction: row; }
-      .md\:flex-col { flex-direction: column; }
-      .md\:items-start { align-items: flex-start; }
-      .md\:items-center { align-items: center; }
-      .md\:justify-start { justify-content: flex-start; }
-      .md\:justify-center { justify-content: center; }
-      .md\:justify-between { justify-content: space-between; }
-      .md\:gap-6 { gap: 1.5rem; }
-      .md\:gap-8 { gap: 2rem; }
-      .md\:p-6 { padding: 1.5rem; }
-      .md\:p-8 { padding: 2rem; }
-      .md\:px-4 { padding-left: 1rem; padding-right: 1rem; }
-      .md\:px-8 { padding-left: 2rem; padding-right: 2rem; }
-      .md\:py-12 { padding-top: 3rem; padding-bottom: 3rem; }
-      .md\:py-16 { padding-top: 4rem; padding-bottom: 4rem; }
-      .md\:py-24 { padding-top: 6rem; padding-bottom: 6rem; }
-      .md\:py-32 { padding-top: 8rem; padding-bottom: 8rem; }
-      .md\:text-left { text-align: left; }
-      .md\:text-center { text-align: center; }
-      .md\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
-      .md\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-      .md\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-      .md\:text-5xl { font-size: 3rem; line-height: 1; }
-      .md\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
-      .md\:font-bold { font-weight: 700; }
-      .md\:font-semibold { font-weight: 600; }
-      .md\:leading-relaxed { line-height: 1.625; }
-      .md\:leading-tight { line-height: 1.25; }
-    }
-    @media (min-width: 1024px) {
-      .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-      .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .lg\:flex { display: flex; }
-      .lg\:hidden { display: none; }
-      .lg\:w-1\/3 { width: 33.333333%; }
-      .lg\:w-1\/2 { width: 50%; }
-      .lg\:w-2\/3 { width: 66.666667%; }
-      .lg\:w-full { width: 100%; }
-      .lg\:flex-row { flex-direction: row; }
-      .lg\:flex-col { flex-direction: column; }
-      .lg\:items-center { align-items: center; }
-      .lg\:justify-start { justify-content: flex-start; }
-      .lg\:justify-center { justify-content: center; }
-      .lg\:justify-between { justify-content: space-between; }
-      .lg\:gap-8 { gap: 2rem; }
-      .lg\:gap-12 { gap: 3rem; }
-      .lg\:p-8 { padding: 2rem; }
-      .lg\:px-4 { padding-left: 1rem; padding-right: 1rem; }
-      .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
-      .lg\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-      .lg\:py-28 { padding-top: 7rem; padding-bottom: 7rem; }
-      .lg\:py-32 { padding-top: 8rem; padding-bottom: 8rem; }
-      .lg\:text-left { text-align: left; }
-      .lg\:text-center { text-align: center; }
-      .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-      .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-      .lg\:text-5xl { font-size: 3rem; line-height: 1; }
-      .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
-      .lg\:font-bold { font-weight: 700; }
-      .lg\:font-semibold { font-weight: 600; }
-    }
-    @media (min-width: 1280px) {
-      .xl\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .xl\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-      .xl\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .xl\:flex { display: flex; }
-      .xl\:hidden { display: none; }
-      .xl\:w-1\/3 { width: 33.333333%; }
-      .xl\:w-1\/2 { width: 50%; }
-      .xl\:w-2\/3 { width: 66.666667%; }
-      .xl\:w-full { width: 100%; }
-      .xl\:flex-row { flex-direction: row; }
-      .xl\:flex-col { flex-direction: column; }
-      .xl\:items-center { align-items: center; }
-      .xl\:justify-start { justify-content: flex-start; }
-      .xl\:justify-center { justify-content: center; }
-      .xl\:justify-between { justify-content: space-between; }
-      .xl\:gap-8 { gap: 2rem; }
-      .xl\:gap-12 { gap: 3rem; }
-      .xl\:p-8 { padding: 2rem; }
-      .xl\:px-4 { padding-left: 1rem; padding-right: 1rem; }
-      .xl\:px-8 { padding-left: 2rem; padding-right: 2rem; }
-      .xl\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-      .xl\:py-28 { padding-top: 7rem; padding-bottom: 7rem; }
-      .xl\:py-32 { padding-top: 8rem; padding-bottom: 8rem; }
-      .xl\:text-left { text-align: left; }
-      .xl\:text-center { text-align: center; }
-      .xl\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-      .xl\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-      .xl\:text-5xl { font-size: 3rem; line-height: 1; }
-      .xl\:text-6xl { font-size: 3.75rem; line-height: 1; }
-      .xl\:font-bold { font-weight: 700; }
-      .xl\:font-semibold { font-weight: 600; }
-    }
-    @media (prefers-color-scheme: dark) {
-      .dark\:bg-white { background-color: #ffffff; }
-      .dark\:text-dark { color: #1a1a2e; }
-      .dark\:text-gray-300 { color: #d1d5db; }
-      .dark\:text-gray-400 { color: #9ca3af; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .motion-reduce\:transform-none { transform: none; }
-      .motion-reduce\:transition-none { transition: none; }
-      .motion-reduce\:duration-0 { transition-duration: 0s; }
-    }
+    @media (min-width: 640px) { .sm\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); } .sm\:text-left { text-align: left; } .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; } }
+    @media (min-width: 768px) { .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); } .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); } .md\:flex { display: flex; } .md\:hidden { display: none; } .md\:w-1\/2 { width: 50%; } .md\:w-2\/3 { width: 66.666667%; } .md\:w-3\/4 { width: 75%; } .md\:w-full { width: 100%; } .md\:flex-row { flex-direction: row; } .md\:flex-col { flex-direction: column; } .md\:items-start { align-items: flex-start; } .md\:items-center { align-items: center; } .md\:justify-start { justify-content: flex-start; } .md\:justify-center { justify-content: center; } .md\:justify-between { justify-content: space-between; } .md\:gap-6 { gap: 1.5rem; } .md\:gap-8 { gap: 2rem; } .md\:p-6 { padding: 1.5rem; } .md\:p-8 { padding: 2rem; } .md\:px-4 { padding-left: 1rem; padding-right: 1rem; } .md\:px-8 { padding-left: 2rem; padding-right: 2rem; } .md\:py-12 { padding-top: 3rem; padding-bottom: 3rem; } .md\:py-16 { padding-top: 4rem; padding-bottom: 4rem; } .md\:py-24 { padding-top: 6rem; padding-bottom: 6rem; } .md\:py-32 { padding-top: 8rem; padding-bottom: 8rem; } .md\:text-left { text-align: left; } .md\:text-center { text-align: center; } .md\:text-2xl { font-size: 1.5rem; line-height: 2rem; } .md\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; } .md\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; } .md\:text-5xl { font-size: 3rem; line-height: 1; } .md\:text-xl { font-size: 1.25rem; line-height: 1.75rem; } .md\:font-bold { font-weight: 700; } .md\:font-semibold { font-weight: 600; } .md\:leading-relaxed { line-height: 1.625; } .md\:leading-tight { line-height: 1.25; } }
+    @media (min-width: 1024px) { .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); } .lg\:grid-cols-5 { grid-template-columns: repeat(5, 1fr); } .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); } .lg\:flex { display: flex; } .lg\:hidden { display: none; } .lg\:w-1\/3 { width: 33.333333%; } .lg\:w-1\/2 { width: 50%; } .lg\:w-2\/3 { width: 66.666667%; } .lg\:w-full { width: 100%; } .lg\:flex-row { flex-direction: row; } .lg\:flex-col { flex-direction: column; } .lg\:items-center { align-items: center; } .lg\:justify-start { justify-content: flex-start; } .lg\:justify-center { justify-content: center; } .lg\:justify-between { justify-content: space-between; } .lg\:gap-8 { gap: 2rem; } .lg\:gap-12 { gap: 3rem; } .lg\:p-8 { padding: 2rem; } .lg\:px-4 { padding-left: 1rem; padding-right: 1rem; } .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; } .lg\:py-20 { padding-top: 5rem; padding-bottom: 5rem; } .lg\:py-28 { padding-top: 7rem; padding-bottom: 7rem; } .lg\:py-32 { padding-top: 8rem; padding-bottom: 8rem; } .lg\:text-left { text-align: left; } .lg\:text-center { text-align: center; } .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; } .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; } .lg\:text-5xl { font-size: 3rem; line-height: 1; } .lg\:text-6xl { font-size: 3.75rem; line-height: 1; } .lg\:font-bold { font-weight: 700; } .lg\:font-semibold { font-weight: 600; } }
+    @media (min-width: 1280px) { .xl\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); } .xl\:grid-cols-5 { grid-template-columns: repeat(5, 1fr); } .xl\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); } .xl\:flex { display: flex; } .xl\:hidden { display: none; } .xl\:w-1\/3 { width: 33.333333%; } .xl\:w-1\/2 { width: 50%; } .xl\:w-2\/3 { width: 66.666667%; } .xl\:w-full { width: 100%; } .xl\:flex-row { flex-direction: row; } .xl\:flex-col { flex-direction: column; } .xl\:items-center { align-items: center; } .xl\:justify-start { justify-content: flex-start; } .xl\:justify-center { justify-content: center; } .xl\:justify-between { justify-content: space-between; } .xl\:gap-8 { gap: 2rem; } .xl\:gap-12 { gap: 3rem; } .xl\:p-8 { padding: 2rem; } .xl\:px-4 { padding-left: 1rem; padding-right: 1rem; } .xl\:px-8 { padding-left: 2rem; padding-right: 2rem; } .xl\:py-20 { padding-top: 5rem; padding-bottom: 5rem; } .xl\:py-28 { padding-top: 7rem; padding-bottom: 7rem; } .xl\:py-32 { padding-top: 8rem; padding-bottom: 8rem; } .xl\:text-left { text-align: left; } .xl\:text-center { text-align: center; } .xl\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; } .xl\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; } .xl\:text-5xl { font-size: 3rem; line-height: 1; } .xl\:text-6xl { font-size: 3.75rem; line-height: 1; } .xl\:font-bold { font-weight: 700; } .xl\:font-semibold { font-weight: 600; } }
+    @media (prefers-color-scheme: dark) { .dark\:bg-white { background-color: #fff; } .dark\:text-dark { color: #1a1a2e; } .dark\:text-gray-300 { color: #d1d5db; } .dark\:text-gray-400 { color: #9ca3af; } }
+    @media (prefers-reduced-motion: reduce) { .motion-reduce\:transform-none { transform: none; } .motion-reduce\:transition-none { transition: none; } .motion-reduce\:duration-0 { transition-duration: 0s; } }
     .print\:hidden { display: none; }
-    @media print {
-      .print\:hidden { display: none; }
-    }
+    @media print { .print\:hidden { display: none; } }
   </style>
 </head>
 <body class="flex min-h-full flex-col font-sans antialiased">
@@ -471,19 +348,20 @@
         <img src="/images/logo.webp" alt="Sai Enterprises" class="h-10 w-auto" />
       </a>
 
+      <!-- Desktop Nav -->
       <div class="hidden items-center gap-1 lg:flex">
         <a href="/" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Home</a>
-        <a href="#about" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">About Us</a>
-        <a href="#products" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Products</a>
-        <a href="#services" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Services</a>
-        <a href="#applications" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Applications</a>
+        <a href="/about" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">About Us</a>
+        <a href="/products" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Products</a>
+        <a href="/services" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Services</a>
+        <a href="/projects?category=commercial" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Applications</a>
         <a href="/insudesign" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">INSUDESIGN</a>
         <a href="/projects" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Projects</a>
-        <a href="#gallery" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Gallery</a>
-        <a href="#contact" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Contact</a>
+        <a href="/gallery" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Gallery</a>
         <a href="/contact" class="ml-4 rounded-full bg-orange px-6 py-3 text-sm font-bold uppercase text-black backdrop-blur-sm transition-all hover:bg-orange-dark hover:scale-105 shadow-lg">GET A QUOTE &rarr;</a>
       </div>
 
+      <!-- Mobile Menu Button -->
       <button onclick="toggleMobileMenu()" class="flex cursor-pointer items-center rounded-full bg-orange p-2 text-black transition-all hover:bg-orange-dark lg:hidden" aria-label="Toggle menu">
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -491,627 +369,176 @@
       </button>
     </div>
 
+    <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden border-t border-white/20 bg-white/95 backdrop-blur-md px-4 pb-6 pt-2 lg:hidden max-h-[80vh] overflow-y-auto">
       <a href="/" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Home</a>
-      <a href="#about" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">About Us</a>
-      <a href="#products" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Products</a>
-      <a href="#services" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Services</a>
-      <a href="#applications" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Applications</a>
+      <a href="/about" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">About Us</a>
+      <a href="/products" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Products</a>
+      <a href="/services" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Services</a>
+      <a href="/projects?category=commercial" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Applications</a>
       <a href="/insudesign" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">INSUDESIGN</a>
       <a href="/projects" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Projects</a>
-      <a href="#gallery" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Gallery</a>
-      <a href="#contact" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Contact</a>
+      <a href="/gallery" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Gallery</a>
       <a href="/contact" onclick="closeMobileMenu()" class="mt-4 block rounded-full bg-orange px-6 py-3 text-center text-sm font-bold uppercase text-black backdrop-blur-sm transition-all hover:bg-orange-dark hover:scale-105">GET A QUOTE &rarr;</a>
     </div>
   </nav>
 
+  <!-- Page Content -->
   <div class="pt-[73px]">
 
-    <!-- Hero Section -->
-    <section class="relative flex min-h-[90vh] items-center overflow-hidden bg-dark">
-      <div class="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/75 to-dark/90" />
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/5a00a04b0696810bd81b11fe.webp')" />
-      <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent" />
-      <div class="relative mx-auto max-w-7xl px-4 text-center lg:px-8">
-        <h1 class="mb-6 text-4xl font-bold uppercase leading-tight text-white md:text-5xl lg:text-6xl">
-          Your Trusted Partner in <span class="text-orange">Thermal Insulation</span> &amp;
-          <span class="text-blue">Acoustics</span>
-        </h1>
-        <p class="mx-auto mb-10 max-w-2xl text-lg text-gray-300">
-          42 years of engineering excellence | ISO 9001:2008 Certified
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="/contact" class="rounded bg-orange px-8 py-3.5 font-bold uppercase text-black shadow-lg shadow-orange/30 transition-all hover:bg-orange-dark hover:scale-105 hover:shadow-xl hover:shadow-orange/40">
+    <!-- ========== HOME PAGE (index.html) ========== -->
+    <main class="flex-1">
+
+      <!-- Hero -->
+      <section class="relative flex min-h-[90vh] items-center overflow-hidden bg-dark">
+        <div class="absolute inset-0 bg-gradient-to-br from-dark/90 via-dark/75 to-dark/90" />
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/5a00a04b0696810bd81b11fe.webp')" />
+        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent" />
+        <div class="relative mx-auto max-w-7xl px-4 text-center lg:px-8">
+          <h1 class="mb-6 text-4xl font-bold uppercase leading-tight text-white md:text-5xl lg:text-6xl">
+            Your Trusted Partner in <span class="text-orange">Thermal Insulation</span> &amp;
+            <span class="text-blue">Acoustics</span>
+          </h1>
+          <p class="mx-auto mb-10 max-w-2xl text-lg text-gray-300">
+            42 years of engineering excellence | ISO 9001:2008 Certified
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/contact" class="rounded bg-orange px-8 py-3.5 font-bold uppercase text-black shadow-lg shadow-orange/30 transition-all hover:bg-orange-dark hover:scale-105 hover:shadow-xl hover:shadow-orange/40">
+              GET A QUOTE &rarr;
+            </a>
+            <a href="/about" class="rounded border-2 border-blue px-8 py-3.5 font-bold uppercase text-blue transition-all hover:bg-blue hover:text-black">
+              LEARN MORE
+            </a>
+          </div>
+          <p class="mt-8 text-sm italic text-gray-500">&ldquo;we save energy..&rdquo;</p>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="bg-dark">
+        <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+          <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+            <div class="relative border-l-4 border-orange bg-dark-alt px-6 py-8 text-center">
+              <p class="text-4xl font-bold text-white md:text-5xl">42+</p>
+              <p class="mt-2 text-sm text-gray-400">Years of Experience</p>
+            </div>
+            <div class="relative border-l-4 border-blue bg-dark-alt px-6 py-8 text-center">
+              <p class="text-4xl font-bold text-white md:text-5xl">500+</p>
+              <p class="mt-2 text-sm text-gray-400">Projects Delivered</p>
+            </div>
+            <div class="relative border-l-4 border-orange bg-dark-alt px-6 py-8 text-center">
+              <p class="text-4xl font-bold text-white md:text-5xl">200+</p>
+              <p class="mt-2 text-sm text-gray-400">Manpower Capacity</p>
+            </div>
+            <div class="relative border-l-4 border-blue bg-dark-alt px-6 py-8 text-center">
+              <p class="text-4xl font-bold text-white md:text-5xl">100%</p>
+              <p class="mt-2 text-sm text-gray-400">Client Satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Services -->
+      <section class="py-20 lg:py-28">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8">
+          <h2 class="mb-4 text-center text-3xl font-bold text-dark">
+            What <span class="text-orange">We</span> <span class="text-blue">Do</span>
+          </h2>
+          <p class="mb-12 text-center text-gray-text">Comprehensive insulation, acoustics, and civil solutions</p>
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="group rounded-lg border border-gray-200 bg-white p-6 text-center transition-all hover:shadow-md">
+              <div class="mb-4 flex justify-center">
+                <svg class="h-10 w-10 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25M12 21v-2.25M3 12h2.25M18.75 12H21M4.93 4.93l1.59 1.59m10.96 10.96l1.59 1.59M4.93 19.07l1.59-1.59m10.96-10.96l1.59-1.59M12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z" /></svg>
+              </div>
+              <h3 class="mb-3 text-lg font-bold text-orange">Thermal Insulation</h3>
+              <p class="text-sm leading-relaxed text-gray-text">Hot &amp; cold insulation solutions — Rockwool, Nitrile Rubber, PUF Panels with cladding for industrial efficiency.</p>
+            </div>
+            <div class="group rounded-lg border border-gray-200 bg-white p-6 text-center transition-all hover:shadow-md">
+              <div class="mb-4 flex justify-center">
+                <svg class="h-10 w-10 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" /></svg>
+              </div>
+              <h3 class="mb-3 text-lg font-bold text-blue">Acoustic Solutions</h3>
+              <p class="text-sm leading-relaxed text-gray-text">Acoustic panels, enclosures, and noise management solutions for industrial and commercial environments.</p>
+            </div>
+            <div class="group rounded-lg border border-gray-200 bg-white p-6 text-center transition-all hover:shadow-md">
+              <div class="mb-4 flex justify-center">
+                <svg class="h-10 w-10 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" /></svg>
+              </div>
+              <h3 class="mb-3 text-lg font-bold text-orange">Fire Protection</h3>
+              <p class="text-sm leading-relaxed text-gray-text">Fire-rated insulation materials and passive fire protection systems for enhanced safety compliance.</p>
+            </div>
+            <div class="group rounded-lg border border-gray-200 bg-white p-6 text-center transition-all hover:shadow-md">
+              <div class="mb-4 flex justify-center">
+                <svg class="h-10 w-10 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" /></svg>
+              </div>
+              <h3 class="mb-3 text-lg font-bold text-blue">Civil &amp; AMC</h3>
+              <p class="text-sm leading-relaxed text-gray-text">Civil construction, epoxy flooring, false ceiling, and long-term annual maintenance contracts.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Preview -->
+      <section class="py-20 lg:py-28" style="background: linear-gradient(135deg, #FFF5F5 0%, #F0F7FF 100%)">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <h2 class="mb-6 text-3xl font-bold text-dark">
+              India&apos;s Trusted <span class="text-orange">Insulation</span> <span class="text-blue">Partner</span>
+            </h2>
+            <p class="mb-6 leading-relaxed text-gray-text">
+              First dedicated insulation company in the Marathwada region. ISO 9001:2008 Certified with pan-India
+              presence across thermal insulation, acoustic solutions, and civil works. From complex industrial
+              projects to annual maintenance contracts — we deliver engineering excellence every time.
+            </p>
+            <a href="/about" class="inline-block font-semibold text-blue transition-all hover:text-orange">
+              Know More &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Preview -->
+      <section id="gallery" class="py-20 lg:py-28 bg-gray-50">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8">
+          <h2 class="mb-4 text-center text-3xl font-bold text-dark">
+            Our <span class="text-orange">Gallery</span>
+          </h2>
+          <p class="mb-12 text-center text-gray-text">Explore our latest projects and installations</p>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (1).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square"><img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (1).jpeg" alt="Gallery image 1" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" /></a>
+            <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (2).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square"><img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (2).jpeg" alt="Gallery image 2" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" /></a>
+            <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (3).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square"><img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (3).jpeg" alt="Gallery image 3" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" /></a>
+            <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (4).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square"><img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (4).jpeg" alt="Gallery image 4" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" /></a>
+            <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (5).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square"><img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (5).jpeg" alt="Gallery image 5" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" /></a>
+          </div>
+          <div class="mt-8 text-center">
+            <a href="/gallery" class="inline-block rounded bg-orange px-8 py-3.5 font-bold uppercase text-black transition-all hover:bg-orange-dark hover:scale-105">
+              View Full Gallery &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="bg-dark py-16 text-center">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8">
+          <h2 class="mb-4 text-3xl font-bold text-white">
+            Ready to optimize your <span class="text-blue">energy efficiency</span>?
+          </h2>
+          <p class="mb-8 text-gray-400">Let our team of experts design the perfect solution for your needs.</p>
+          <a href="/contact" class="inline-block rounded bg-orange px-8 py-3.5 font-bold uppercase text-black transition-all hover:bg-orange-dark hover:scale-105">
             GET A QUOTE &rarr;
           </a>
-          <a href="#about" class="rounded border-2 border-blue px-8 py-3.5 font-bold uppercase text-blue transition-all hover:bg-blue hover:text-black">
-            LEARN MORE
-          </a>
         </div>
-        <p class="mt-8 text-sm italic text-gray-500">&ldquo;we save energy..&rdquo;</p>
-      </div>
-    </section>
+      </section>
 
-    <!-- Stats Section -->
-    <section class="bg-dark">
-      <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
-        <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
-          <div class="relative border-l-4 border-orange bg-dark-alt px-6 py-8 text-center">
-            <p class="text-4xl font-bold text-white md:text-5xl">42+</p>
-            <p class="mt-2 text-sm text-gray-400">Years of Experience</p>
-          </div>
-          <div class="relative border-l-4 border-blue bg-dark-alt px-6 py-8 text-center">
-            <p class="text-4xl font-bold text-white md:text-5xl">500+</p>
-            <p class="mt-2 text-sm text-gray-400">Projects Delivered</p>
-          </div>
-          <div class="relative border-l-4 border-orange bg-dark-alt px-6 py-8 text-center">
-            <p class="text-4xl font-bold text-white md:text-5xl">200+</p>
-            <p class="mt-2 text-sm text-gray-400">Manpower Capacity</p>
-          </div>
-          <div class="relative border-l-4 border-blue bg-dark-alt px-6 py-8 text-center">
-            <p class="text-4xl font-bold text-white md:text-5xl">100%</p>
-            <p class="mt-2 text-sm text-gray-400">Client Satisfaction</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Core Services Section -->
-    <section class="py-20 lg:py-28">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <h2 class="mb-4 text-center text-3xl font-bold text-dark">
-          What <span class="text-orange">We</span> <span class="text-blue">Do</span>
-        </h2>
-        <p class="mb-12 text-center text-gray-text">Comprehensive insulation, acoustics, and civil solutions</p>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="group rounded-lg border border-gray-200 bg-white p-6 text-center transition-all hover:shadow-md">
-            <div class="mb-4 flex justify-center">
-              <svg class="h-10 w-10 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25M12 21v-2.25M3 12h2.25M18.75 12H21M4.93 4.93l1.59 1.59m10.96 10.96l1.59 1.59M4.93 19.07l1.59-1.59m10.96-10.96l1.59-1.59M12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z" />
-              </svg>
-            </div>
-            <h3 class="mb-3 text-lg font-bold text-orange">Thermal Insulation</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Hot &amp; cold insulation solutions — Rockwool, Nitrile Rubber, PUF Panels with cladding for industrial efficiency.</p>
-          </div>
-          <div class="group rounded-lg border border-gray-200 bg-white p-6 text-center transition-all hover:shadow-md">
-            <div class="mb-4 flex justify-center">
-              <svg class="h-10 w-10 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
-              </svg>
-            </div>
-            <h3 class="mb-3 text-lg font-bold text-blue">Acoustic Solutions</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Acoustic panels, enclosures, and noise management solutions for industrial and commercial environments.</p>
-          </div>
-          <div class="group rounded-lg border border-gray-200 bg-white p-6 text-center transition-all hover:shadow-md">
-            <div class="mb-4 flex justify-center">
-              <svg class="h-10 w-10 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
-              </svg>
-            </div>
-            <h3 class="mb-3 text-lg font-bold text-orange">Fire Protection</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Fire-rated insulation materials and passive fire protection systems for enhanced safety compliance.</p>
-          </div>
-          <div class="group rounded-lg border border-gray-200 bg-white p-6 text-center transition-all hover:shadow-md">
-            <div class="mb-4 flex justify-center">
-              <svg class="h-10 w-10 text-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
-              </svg>
-            </div>
-            <h3 class="mb-3 text-lg font-bold text-blue">Civil &amp; AMC</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Civil construction, epoxy flooring, false ceiling, and long-term annual maintenance contracts.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 lg:py-28" style="background: linear-gradient(135deg, #FFF5F5 0%, #F0F7FF 100%)">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center">
-          <h2 class="mb-6 text-3xl font-bold text-dark">
-            India&apos;s Trusted <span class="text-orange">Insulation</span> <span class="text-blue">Partner</span>
-          </h2>
-          <p class="mb-6 leading-relaxed text-gray-text">
-            First dedicated insulation company in the Marathwada region. ISO 9001:2008 Certified with pan-India
-            presence across thermal insulation, acoustic solutions, and civil works. From complex industrial
-            projects to annual maintenance contracts — we deliver engineering excellence every time.
-          </p>
-          <a href="#about" class="inline-block font-semibold text-blue transition-all hover:text-orange">
-            Know More &rarr;
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Us Full Section -->
-    <section class="py-16 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <div class="grid gap-12 lg:grid-cols-2">
-          <div>
-            <div class="mb-8 aspect-[16/10] rounded-lg bg-cover bg-center" style="background-image: url('/images/5a00a0077d8f8105485ef9cb.webp')" />
-            <h2 class="mb-6 text-3xl font-bold text-dark">
-              Our <span class="text-orange">Story</span>
-            </h2>
-            <p class="mb-4 leading-relaxed text-gray-text">
-              Our entrepreneurial journey began during our founder&apos;s time with Lloyd&apos;s, where deep technical grounding in thermal systems was gained. When relocating to Aurangabad, the rapidly growing industrial base and the rising demand for thermal insulation, civil works, and acoustic solutions were recognized — needs that were not being adequately served locally.
-            </p>
-            <p class="mb-4 leading-relaxed text-gray-text">
-              This gap, combined with our technical background, inspired the establishment of our own venture. We went on to become the first dedicated insulation company in the Marathwada region, laying the foundation for everything we&apos;ve built since.
-            </p>
-            <p class="leading-relaxed text-gray-text">
-              With <strong class="text-orange">42 years of experience</strong> working pan-India across a wide range of industries, we&apos;ve developed the versatility and technical depth to take on complex, high-difficulty projects that many competitors are unable to handle.
-            </p>
-          </div>
-          <div class="rounded-lg bg-gray-100 p-8">
-            <h3 class="mb-6 text-2xl font-bold text-dark">
-              Mission &amp; <span class="text-blue">Vision</span>
-            </h3>
-            <div class="mb-6">
-              <h4 class="mb-2 font-bold text-orange">Our Mission</h4>
-              <p class="leading-relaxed text-gray-text">
-                To help industries achieve optimal energy efficiency through reliable, engineered solutions in thermal insulation, comfort cooling, and acoustics.
-              </p>
-            </div>
-            <div class="mb-6">
-              <h4 class="mb-2 font-bold text-blue">Our Vision</h4>
-              <p class="leading-relaxed text-gray-text">
-                To be the most trusted partner for industrial energy conservation across India, known for technical excellence and long-term client relationships.
-              </p>
-            </div>
-            <div>
-              <h4 class="mb-2 font-bold text-dark">Tagline</h4>
-              <p class="text-lg italic text-gray-text">&ldquo;we save energy..&rdquo;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Core Values -->
-    <section class="bg-gray-50 py-16 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <h2 class="mb-12 text-center text-3xl font-bold text-dark">
-          <span class="text-orange">Core</span> <span class="text-blue">Values</span>
-        </h2>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-lg bg-white p-6 shadow-sm border-l-4 border-orange">
-            <h3 class="mb-3 text-lg font-bold text-dark">Technical Excellence</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Deep engineering knowledge applied to every project with precision and expertise.</p>
-          </div>
-          <div class="rounded-lg bg-white p-6 shadow-sm border-l-4 border-blue">
-            <h3 class="mb-3 text-lg font-bold text-dark">Integrity</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Honest, transparent client relationships built on trust and reliability.</p>
-          </div>
-          <div class="rounded-lg bg-white p-6 shadow-sm border-l-4 border-orange">
-            <h3 class="mb-3 text-lg font-bold text-dark">Ownership</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Every team member takes responsibility from planning through execution.</p>
-          </div>
-          <div class="rounded-lg bg-white p-6 shadow-sm border-l-4 border-blue">
-            <h3 class="mb-3 text-lg font-bold text-dark">Continuous Learning</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Staying updated with new materials, techniques, and industry best practices.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="py-16 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <h2 class="mb-8 text-center text-3xl font-bold text-dark">
-          <span class="text-orange">Certifications</span> &amp; <span class="text-blue">Recognition</span>
-        </h2>
-        <div class="flex flex-wrap justify-center gap-8 text-center">
-          <div class="rounded-lg border border-orange/30 p-6">
-            <p class="text-lg font-bold text-orange">ISO 9001:2008</p>
-            <p class="text-sm text-gray-text">Certified Company</p>
-          </div>
-          <div class="rounded-lg border border-blue/30 p-6">
-            <p class="text-lg font-bold text-blue">Bharat Gaurav Puraskar</p>
-            <p class="text-sm text-gray-text">Industry Recognition Award</p>
-          </div>
-          <div class="rounded-lg border border-orange/30 p-6">
-            <p class="text-lg font-bold text-orange">42+ Years</p>
-            <p class="text-sm text-gray-text">Industry Experience</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="py-16 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <h2 class="mb-4 text-center text-3xl font-bold text-dark">
-          Our <span class="text-blue">Products</span>
-        </h2>
-        <p class="mb-12 text-center text-gray-text">Comprehensive range of insulation and allied materials</p>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <div id="rockwool" class="group rounded-lg border border-orange/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">Rockwool Insulation</h3>
-            <p class="text-sm leading-relaxed text-gray-text">High-temperature resistant mineral wool for industrial pipes, ducts, and vessels.</p>
-          </div>
-          <div id="nitrile-rubber" class="group rounded-lg border border-blue/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">Nitrile Rubber</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Flexible closed-cell foam insulation for cold applications, HVAC, and chillers.</p>
-          </div>
-          <div id="aluminum-sheet" class="group rounded-lg border border-orange/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">Aluminum Sheet</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Cladding and jacketing material providing protective outer layer for insulation systems.</p>
-          </div>
-          <div id="ss-sheet" class="group rounded-lg border border-blue/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">SS Sheet</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Stainless steel cladding for high-corrosion and demanding environments.</p>
-          </div>
-          <div id="acoustic-panels" class="group rounded-lg border border-orange/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">Acoustic Panels</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Sound-absorbing panels manufactured in-house for studios and industrial noise control.</p>
-          </div>
-          <div id="puf-panel" class="group rounded-lg border border-blue/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">PUF Panel</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Polyurethane foam panels and pipe sections manufactured in-house for cold storage and ducting.</p>
-          </div>
-          <div id="ducting" class="group rounded-lg border border-orange/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">Ducting Material</h3>
-            <p class="text-sm leading-relaxed text-gray-text">HVAC ducting components for air conditioning and ventilation systems.</p>
-          </div>
-          <div id="hvac" class="group rounded-lg border border-blue/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">HVAC Products</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Heating, ventilation, and air conditioning products for comfort cooling systems.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 lg:py-24 bg-gray-50">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <h2 class="mb-4 text-center text-3xl font-bold text-dark">
-          Our <span class="text-orange">Services</span>
-        </h2>
-        <p class="mb-12 text-center text-gray-text">End-to-end insulation, acoustics, and civil solutions</p>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div id="hot-insulation" class="group rounded-lg border border-orange/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-orange">Hot Insulation</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Rockwool with aluminum/SS cladding for pipes, vessels, and boilers.</p>
-          </div>
-          <div id="cold-insulation" class="group rounded-lg border border-blue/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-blue">Cold Insulation</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Nitrile rubber and PUF insulation for chillers, pipelines, and cold storage.</p>
-          </div>
-          <div id="acoustic-insulation" class="group rounded-lg border border-orange/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-orange">Acoustic Insulation</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Panels, enclosures, and noise barriers for industrial environments.</p>
-          </div>
-          <div id="clean-rooms" class="group rounded-lg border border-blue/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-blue">Clean Rooms</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Insulated panels for controlled environments requiring strict temperature and cleanliness standards.</p>
-          </div>
-          <div id="false-ceiling" class="group rounded-lg border border-orange/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-orange">False Ceiling</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Gypsum, mineral fiber, and metal ceiling system installation.</p>
-          </div>
-          <div id="epoxy-flooring" class="group rounded-lg border border-blue/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-blue">Epoxy Flooring</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Industrial grade epoxy floor solutions for durability and safety.</p>
-          </div>
-          <div id="ducting" class="group rounded-lg border border-orange/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-orange">Ducting</h3>
-            <p class="text-sm leading-relaxed text-gray-text">HVAC duct fabrication and installation for efficient air distribution.</p>
-          </div>
-          <div id="puf-panels" class="group rounded-lg border border-blue/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-blue">PUF Panels</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Supply and installation of PUF panels for cold storage and insulation.</p>
-          </div>
-          <div id="amc" class="group rounded-lg border border-orange/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-orange">AMC Contracts</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Annual maintenance contracts with 30+ years of expertise, ensuring long-term system reliability.</p>
-          </div>
-          <div id="civil-works" class="group rounded-lg border border-blue/30 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-blue">Civil Works</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Government and private civil construction projects with quality execution.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Specialty Section -->
-    <section class="bg-dark py-16 text-center">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <h2 class="mb-4 text-2xl font-bold text-white">
-          Ready to get <span class="text-blue">started</span>?
-        </h2>
-        <p class="mb-8 text-gray-400">Let us provide the best service in quality as per your requirements.</p>
-        <a href="#contact" class="inline-block rounded bg-orange px-8 py-3 font-bold uppercase text-black transition-all hover:bg-orange-dark hover:scale-105">
-          GET A QUOTE &rarr;
-        </a>
-      </div>
-    </section>
-
-    <!-- Applications Section -->
-    <section id="applications" class="py-16 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <h2 class="mb-4 text-center text-3xl font-bold text-dark">
-          Our <span class="text-orange">Applications</span>
-        </h2>
-        <p class="mb-12 text-center text-gray-text">Delivering excellence across industries</p>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="group rounded-lg border border-gray-200 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">Commercial</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Commercial insulation and acoustic solutions for businesses.</p>
-          </div>
-          <div class="group rounded-lg border border-gray-200 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">Educational</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Insulation and acoustic solutions for educational institutions.</p>
-          </div>
-          <div class="group rounded-lg border border-gray-200 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">Healthcare</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Specialized insulation for healthcare facilities and hospitals.</p>
-          </div>
-          <div class="group rounded-lg border border-gray-200 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">Residential</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Thermal insulation solutions for residential buildings.</p>
-          </div>
-          <div class="group rounded-lg border border-gray-200 bg-white p-6 transition-all hover:shadow-md">
-            <h3 class="mb-3 text-lg font-bold text-dark">Industrial</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Heavy-duty insulation for industrial facilities and manufacturing.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 lg:py-24 bg-gray-50">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <h2 class="mb-4 text-center text-3xl font-bold text-dark">
-          Our <span class="text-orange">Projects</span>
-        </h2>
-        <p class="mb-12 text-center text-gray-text">Delivering excellence across industries</p>
-        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md">
-            <div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gray-100">
-              <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (1).jpeg" alt="Industrial Insulation Project" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-5">
-              <span class="mb-2 inline-block rounded px-2.5 py-0.5 text-xs font-semibold bg-orange/20 text-orange">Industrial</span>
-              <h3 class="mb-2 text-lg font-bold text-dark">Industrial Insulation Project</h3>
-              <p class="text-sm leading-relaxed text-gray-text">Comprehensive thermal insulation for large-scale industrial facility.</p>
-            </div>
-          </div>
-          <div class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md">
-            <div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gray-100">
-              <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (2).jpeg" alt="Commercial HVAC System" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-5">
-              <span class="mb-2 inline-block rounded px-2.5 py-0.5 text-xs font-semibold bg-blue/20 text-blue">Commercial</span>
-              <h3 class="mb-2 text-lg font-bold text-dark">Commercial HVAC System</h3>
-              <p class="text-sm leading-relaxed text-gray-text">HVAC ducting and cold insulation for commercial complex.</p>
-            </div>
-          </div>
-          <div class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md">
-            <div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gray-100">
-              <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (3).jpeg" alt="Hospital Clean Rooms" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-5">
-              <span class="mb-2 inline-block rounded px-2.5 py-0.5 text-xs font-semibold bg-orange/20 text-orange">Healthcare</span>
-              <h3 class="mb-2 text-lg font-bold text-dark">Hospital Clean Rooms</h3>
-              <p class="text-sm leading-relaxed text-gray-text">Clean room insulation panels for healthcare facility.</p>
-            </div>
-          </div>
-          <div class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md">
-            <div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gray-100">
-              <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (4).jpeg" alt="Educational Building" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-5">
-              <span class="mb-2 inline-block rounded px-2.5 py-0.5 text-xs font-semibold bg-blue/20 text-blue">Educational</span>
-              <h3 class="mb-2 text-lg font-bold text-dark">Educational Building</h3>
-              <p class="text-sm leading-relaxed text-gray-text">Acoustic insulation and false ceiling for educational institution.</p>
-            </div>
-          </div>
-          <div class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md">
-            <div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gray-100">
-              <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (5).jpeg" alt="Residential Complex" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-5">
-              <span class="mb-2 inline-block rounded px-2.5 py-0.5 text-xs font-semibold bg-orange/20 text-orange">Residential</span>
-              <h3 class="mb-2 text-lg font-bold text-dark">Residential Complex</h3>
-              <p class="text-sm leading-relaxed text-gray-text">Thermal insulation and PUF panels for residential development.</p>
-            </div>
-          </div>
-          <div class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-md">
-            <div class="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gray-100">
-              <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (6).jpeg" alt="Manufacturing Plant" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-            <div class="p-5">
-              <span class="mb-2 inline-block rounded px-2.5 py-0.5 text-xs font-semibold bg-blue/20 text-blue">Industrial</span>
-              <h3 class="mb-2 text-lg font-bold text-dark">Manufacturing Plant</h3>
-              <p class="text-sm leading-relaxed text-gray-text">Hot insulation with cladding for manufacturing plant piping.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 lg:py-28 bg-gray-50">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <h2 class="mb-4 text-center text-3xl font-bold text-dark">
-          Our <span class="text-orange">Gallery</span>
-        </h2>
-        <p class="mb-12 text-center text-gray-text">Explore our latest projects and installations</p>
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (1).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (1).jpeg" alt="Gallery image 1" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (2).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (2).jpeg" alt="Gallery image 2" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (3).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (3).jpeg" alt="Gallery image 3" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (4).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (4).jpeg" alt="Gallery image 4" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (5).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (5).jpeg" alt="Gallery image 5" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (6).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (6).jpeg" alt="Gallery image 6" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (7).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50 (7).jpeg" alt="Gallery image 7" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50.jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.34.50.jpeg" alt="Gallery image 8" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.34.jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.34.jpeg" alt="Gallery image 9" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (1).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (1).jpeg" alt="Gallery image 10" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (2).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (2).jpeg" alt="Gallery image 11" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (3).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (3).jpeg" alt="Gallery image 12" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (4).jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35 (4).jpeg" alt="Gallery image 13" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-          <a href="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35.jpeg" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-lg bg-gray-200 aspect-square">
-            <img src="/images/gallery/WhatsApp Image 2026-07-30 at 22.35.35.jpeg" alt="Gallery image 14" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
-          </a>
-        </div>
-        <div class="mt-8 text-center">
-          <a href="/gallery" class="inline-block rounded bg-orange px-8 py-3.5 font-bold uppercase text-black transition-all hover:bg-orange-dark hover:scale-105">
-            View Full Gallery &rarr;
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- INSUDESIGN Section -->
-    <section id="insudesign" class="py-16 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center">
-          <h2 class="mb-6 text-3xl font-bold text-dark">
-            <span class="text-orange">INSU</span><span class="text-blue">DESIGN</span>
-          </h2>
-          <p class="mb-8 text-lg text-gray-text">In-house Consultancy &amp; Design Cell</p>
-          <p class="mb-8 leading-relaxed text-gray-text">
-            INSUDESIGN is our dedicated in-house consultancy and design cell that brings decades of field
-            experience to every project. We provide engineered, code-compliant insulation designs before
-            execution begins — ensuring optimal performance, cost efficiency, and regulatory compliance.
-          </p>
-        </div>
-        <div class="grid gap-6 md:grid-cols-3">
-          <div class="rounded-lg border border-orange/30 bg-white p-6 text-center">
-            <h3 class="mb-3 text-lg font-bold text-orange">Technical Design</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Comprehensive insulation system design including material selection, thickness calculation, and cladding specifications.</p>
-          </div>
-          <div class="rounded-lg border border-blue/30 bg-white p-6 text-center">
-            <h3 class="mb-3 text-lg font-bold text-blue">Energy Audit</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Heat loss/gain analysis and energy efficiency assessments to identify optimization opportunities.</p>
-          </div>
-          <div class="rounded-lg border border-orange/30 bg-white p-6 text-center">
-            <h3 class="mb-3 text-lg font-bold text-orange">Specification Drafting</h3>
-            <p class="text-sm leading-relaxed text-gray-text">Detailed technical specifications and tender documents for insulation projects of any scale.</p>
-          </div>
-        </div>
-        <div class="mt-12 text-center">
-          <a href="#contact" class="inline-block rounded bg-orange px-8 py-3 font-bold uppercase text-black transition-all hover:bg-orange-dark">
-            CONSULT WITH US &rarr;
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 lg:py-24 bg-gray-50">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <div class="grid gap-12 lg:grid-cols-2">
-          <div>
-            <h2 class="mb-8 text-3xl font-bold text-dark">
-              Get In <span class="text-blue">Touch</span>
-            </h2>
-            <div class="space-y-6">
-              <div>
-                <h3 class="mb-2 text-sm font-bold uppercase tracking-wider text-orange">Phone</h3>
-                <a href="tel:9822261415" class="block text-lg text-blue transition-colors hover:text-orange">9822261415</a>
-                <p class="text-gray-text">9975401440 / 9850977677</p>
-              </div>
-              <div>
-                <h3 class="mb-2 text-sm font-bold uppercase tracking-wider text-orange">Email</h3>
-                <a href="mailto:insulsai@gmail.com" class="block text-gray-text transition-colors hover:text-blue">insulsai@gmail.com</a>
-                <a href="mailto:saideepinsulations@gmail.com" class="block text-gray-text transition-colors hover:text-blue">saideepinsulations@gmail.com</a>
-              </div>
-              <div>
-                <h3 class="mb-2 text-sm font-bold uppercase tracking-wider text-orange">Head Office</h3>
-                <p class="text-gray-text">170, N-3, CIDCO, Near Ajaydeep Complex, Aurangabad - 431 003</p>
-              </div>
-              <div>
-                <h3 class="mb-2 text-sm font-bold uppercase tracking-wider text-orange">Branch Office</h3>
-                <p class="text-gray-text">Flat No. 1, Sidhivinayak Apartment, Kuber Galli, Opp. Hatiin Institute, Parel Village, Mumbai - 400 012</p>
-              </div>
-              <div>
-                <h3 class="mb-2 text-sm font-bold uppercase tracking-wider text-orange">Godown</h3>
-                <p class="text-gray-text">Sr.No. 109/3/7, Parbhat Road, Vijay Nagar, Kalewadi, Pimpri, Pune</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h2 class="mb-8 text-3xl font-bold text-dark">
-              Send a <span class="text-orange">Message</span>
-            </h2>
-            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you soon.');">
-              <div class="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <label for="name" class="mb-1 block text-sm font-semibold text-dark">Name *</label>
-                  <input id="name" type="text" required class="w-full rounded border border-gray-300 px-4 py-2.5 text-sm focus:border-orange focus:outline-none" />
-                </div>
-                <div>
-                  <label for="email" class="mb-1 block text-sm font-semibold text-dark">Email *</label>
-                  <input id="email" type="email" required class="w-full rounded border border-gray-300 px-4 py-2.5 text-sm focus:border-blue focus:outline-none" />
-                </div>
-              </div>
-              <div>
-                <label for="phone" class="mb-1 block text-sm font-semibold text-dark">Phone</label>
-                <input id="phone" type="tel" class="w-full rounded border border-gray-300 px-4 py-2.5 text-sm focus:border-blue focus:outline-none" />
-              </div>
-              <div>
-                <label for="service" class="mb-1 block text-sm font-semibold text-dark">Service Interested In</label>
-                <select id="service" class="w-full rounded border border-gray-300 px-4 py-2.5 text-sm focus:border-orange focus:outline-none">
-                  <option value="">Select a service...</option>
-                  <option>Thermal Insulation</option>
-                  <option>Acoustic Insulation</option>
-                  <option>Civil Works</option>
-                  <option>AMC Contract</option>
-                  <option>Products</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="message" class="mb-1 block text-sm font-semibold text-dark">Message *</label>
-                <textarea id="message" rows="5" required class="w-full rounded border border-gray-300 px-4 py-2.5 text-sm focus:border-blue focus:outline-none"></textarea>
-              </div>
-              <button type="submit" class="rounded bg-orange px-8 py-3 font-bold uppercase text-black transition-all hover:bg-orange-dark">
-                SEND MESSAGE
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-dark py-8 text-center">
       <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <p class="text-sm text-gray-400">
-          &copy; 2026 Sai Enterprises. All rights reserved. | ISO 9001:2008 Certified
-        </p>
-        <p class="mt-2 text-sm text-gray-500">
-          Thermal Insulation | Acoustic Solutions | Civil Works | AMC Contracts
-        </p>
+        <p class="text-sm text-gray-400">&copy; 2026 Sai Enterprises. All rights reserved. | ISO 9001:2008 Certified</p>
+        <p class="mt-2 text-sm text-gray-500">Thermal Insulation | Acoustic Solutions | Civil Works | AMC Contracts</p>
       </div>
     </footer>
 
@@ -1120,11 +547,8 @@
   <script>
     function toggleMobileMenu() {
       var menu = document.getElementById('mobileMenu');
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-      } else {
-        menu.classList.add('hidden');
-      }
+      if (menu.classList.contains('hidden')) { menu.classList.remove('hidden'); }
+      else { menu.classList.add('hidden'); }
     }
     function closeMobileMenu() {
       var menu = document.getElementById('mobileMenu');
