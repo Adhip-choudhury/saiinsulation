@@ -5,36 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Sai Enterprises</title>
   <meta name="description" content="ISO 9001:2008 Certified. 42+ years of expertise in thermal insulation, acoustic solutions, civil works, and AMC contracts across India." />
+  <meta property="og:title" content="Contact Us | Sai Enterprises" />
+  <meta property="og:description" content="ISO 9001:2008 Certified. 42+ years of expertise in thermal insulation, acoustic solutions, civil works, and AMC contracts across India." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://adhip-choudhury.github.io/saiinsulation/contact.html" />
+  <meta property="og:image" content="https://adhip-choudhury.github.io/saiinsulation/images/5a00a0077d8f8105485ef9cb.webp" />
   <link rel="icon" href="favicon.ico" />
   <link rel="apple-touch-icon" href="icon-192.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="flex min-h-full flex-col font-sans antialiased">
 
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg shadow-xl border-b border-white/20">
+  <nav id="siteNav" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg shadow-xl border-b border-white/20">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
-      <a href="index.html" class="flex items-center gap-2"><img src="images/logo.webp" alt="Sai Enterprises" class="h-10 w-auto" /></a>
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="images/logo.webp" alt="Sai Enterprises" class="h-10 w-auto" />
+      </a>
       <div class="hidden items-center gap-1 lg:flex">
         <a href="index.html" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Home</a>
         <a href="about.html" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">About Us</a>
         <a href="products.html" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Products</a>
         <a href="services.html" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Services</a>
-        <a href="projects.html?category=commercial" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Applications</a>
+        <a href="applications.html" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Applications</a>
         <a href="insudesign.html" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">INSUDESIGN</a>
         <a href="projects.html" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Projects</a>
+        <a href="blog.html" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Blog</a>
         <a href="gallery.html" class="rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Gallery</a>
         <a href="contact.html" class="ml-4 rounded-full bg-orange px-6 py-3 text-sm font-bold uppercase text-black backdrop-blur-sm transition-all hover:bg-orange-dark hover:scale-105 shadow-lg">GET A QUOTE &rarr;</a>
       </div>
-      <button onclick="toggleMobileMenu()" class="flex cursor-pointer items-center rounded-full bg-orange p-2 text-black transition-all hover:bg-orange-dark lg:hidden" aria-label="Toggle menu"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg></button>
+      <button onclick="toggleMobileMenu()" class="flex cursor-pointer items-center rounded-full bg-orange p-2 text-black transition-all hover:bg-orange-dark lg:hidden" aria-label="Toggle menu">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
     </div>
     <div id="mobileMenu" class="hidden border-t border-white/20 bg-white/95 backdrop-blur-md px-4 pb-6 pt-2 lg:hidden max-h-[80vh] overflow-y-auto">
       <a href="index.html" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Home</a>
       <a href="about.html" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">About Us</a>
       <a href="products.html" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Products</a>
       <a href="services.html" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Services</a>
-      <a href="projects.html?category=commercial" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Applications</a>
+      <a href="applications.html" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Applications</a>
       <a href="insudesign.html" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">INSUDESIGN</a>
       <a href="projects.html" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Projects</a>
+      <a href="blog.html" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Blog</a>
       <a href="gallery.html" onclick="closeMobileMenu()" class="block rounded px-3 py-2 text-sm font-semibold text-dark transition-all hover:bg-orange/10 hover:text-orange">Gallery</a>
       <a href="contact.html" onclick="closeMobileMenu()" class="mt-4 block rounded-full bg-orange px-6 py-3 text-center text-sm font-bold uppercase text-black backdrop-blur-sm transition-all hover:bg-orange-dark hover:scale-105">GET A QUOTE &rarr;</a>
     </div>
@@ -79,20 +90,91 @@
             </div>
           </div>
         </div>
+</section>
+
+      <section class="bg-gray-50 py-16 lg:py-24">
+        <div class="mx-auto max-w-7xl px-4 lg:px-8">
+          <h2 class="mb-8 text-center text-3xl font-bold text-dark">Find Us on the <span class="text-orange">Map</span></h2>
+          <p class="mb-8 text-center text-gray-text">Head Office: 170, N-3, CIDCO, Near Ajaydeep Complex, Aurangabad - 431 003</p>
+          <div class="overflow-hidden rounded-lg border border-orange/30 shadow-md">
+            <iframe title="Sai Enterprises Head Office - Aurangabad" src="https://maps.google.com/maps?q=170%2C%20N-3%2C%20CIDCO%2C%20Near%20Ajaydeep%20Complex%2C%20Aurangabad%2C%20Maharashtra%20431003&t=&z=15&ie=UTF8&iwloc=&output=embed" class="h-[400px] w-full" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer class="bg-dark py-8 text-center">
+    <!-- Footer -->
+    <footer class="bg-dark pt-16 pb-6">
       <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <p class="text-sm text-gray-400">&copy; 2026 Sai Enterprises. All rights reserved. | ISO 9001:2008 Certified</p>
-        <p class="mt-2 text-sm text-gray-500">Thermal Insulation | Acoustic Solutions | Civil Works | AMC Contracts</p>
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <img src="images/logo.webp" alt="Sai Enterprises" class="h-12 w-auto invert" />
+            <p class="mt-4 text-sm leading-relaxed text-gray-400">ISO 9001:2008 Certified. First dedicated insulation company in the Marathwada region &mdash; thermal insulation, acoustics &amp; civil works since 1984.</p>
+            <div class="mt-5 flex gap-3">
+              <a href="https://wa.me/919822261415" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-btn"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.356.101 11.937c0 2.105.55 4.159 1.598 5.971L0 24l6.15-1.614a11.92 11.92 0 005.895 1.5h.005c6.58 0 11.94-5.357 11.943-11.94a11.862 11.862 0 00-3.472-8.497"/></svg></a>
+              <a href="https://www.linkedin.com/search/results/all/?keywords=Sai%20Enterprises%20Aurangabad" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-btn"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://www.instagram.com/explore/tags/saiinsulation/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-btn"><svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6.75h.008v.008h-.008V6.75zM3 7.5A4.5 4.5 0 017.5 3h9A4.5 4.5 0 0121 7.5v9a4.5 4.5 0 01-4.5 4.5h-9A4.5 4.5 0 013 16.5v-9zM12 8.25a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5z"/></svg></a>
+              <a href="https://www.facebook.com/search/top?q=Sai%20Enterprises%20Aurangabad" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-btn"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-white">Quick Links</h3>
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="products.html" class="footer-link">Products</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="applications.html" class="footer-link">Applications</a>
+            <a href="projects.html" class="footer-link">Projects</a>
+            <a href="blog.html" class="footer-link">Blog</a>
+            <a href="gallery.html" class="footer-link">Gallery</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-white">Our Services</h3>
+            <a href="services.html#hot-insulation" class="footer-link">Hot Insulation</a>
+            <a href="services.html#cold-insulation" class="footer-link">Cold Insulation</a>
+            <a href="services.html#acoustic-insulation" class="footer-link">Acoustic Insulation</a>
+            <a href="services.html#clean-rooms" class="footer-link">Clean Rooms</a>
+            <a href="services.html#epoxy-flooring" class="footer-link">Epoxy Flooring</a>
+            <a href="services.html#amc" class="footer-link">AMC Contracts</a>
+            <a href="services.html#civil-works" class="footer-link">Civil Works</a>
+            <a href="insudesign.html" class="footer-link">INSUDESIGN Consultancy</a>
+          </div>
+          <div>
+            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-white">Get in Touch</h3>
+            <p class="mb-2 text-sm text-gray-400"><strong class="text-orange">Head Office:</strong><br />170, N-3, CIDCO, Near Ajaydeep Complex, Aurangabad - 431 003</p>
+            <p class="mb-2 text-sm text-gray-400"><strong class="text-orange">Phone:</strong><br /><a href="tel:9822261415" class="text-blue">9822261415</a> / 9975401440 / 9850977677</p>
+            <p class="mb-2 text-sm text-gray-400"><strong class="text-orange">Email:</strong><br /><a href="mailto:insulsai@gmail.com" class="text-blue">insulsai@gmail.com</a></p>
+            <a href="https://maps.google.com/?q=CIDCO,N3,Aurangabad,Maharashtra" target="_blank" rel="noopener noreferrer" class="footer-link text-orange">View on Google Maps &rarr;</a>
+          </div>
+        </div>
+        <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
+          <p class="text-sm text-gray-400">&copy; 2026 Sai Enterprises. All rights reserved.</p>
+          <p class="text-sm text-gray-500">Thermal Insulation | Acoustic Solutions | Civil Works | AMC Contracts | ISO 9001:2008 Certified</p>
+        </div>
       </div>
     </footer>
   </div>
 
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919822261415?text=Hello%20Sai%20Enterprises%2C%20I%20would%20like%20to%20enquire%20about%20insulation%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="whatsapp-float">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.356.101 11.937c0 2.105.55 4.159 1.598 5.971L0 24l6.15-1.614a11.92 11.92 0 005.895 1.5h.005c6.58 0 11.94-5.357 11.943-11.94a11.862 11.862 0 00-3.472-8.497"/></svg>
+    Chat on WhatsApp
+  </a>
+
   <script>
     function toggleMobileMenu() { var m = document.getElementById('mobileMenu'); if (m.classList.contains('hidden')) m.classList.remove('hidden'); else m.classList.add('hidden'); }
     function closeMobileMenu() { document.getElementById('mobileMenu').classList.add('hidden'); }
+    var nav = document.getElementById('siteNav');
+    var lastY = window.pageYOffset;
+    function onScrollNav() {
+      var y = window.pageYOffset;
+      if (y > lastY && y > 160) { nav.classList.add('nav-hide'); } else { nav.classList.remove('nav-hide'); }
+      if (y > 40) { nav.classList.add('nav-scrolled'); } else { nav.classList.remove('nav-scrolled'); }
+      lastY = y;
+    }
+    window.addEventListener('scroll', onScrollNav, { passive: true });
+    onScrollNav();
   </script>
 </body>
 </html>

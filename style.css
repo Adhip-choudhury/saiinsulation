@@ -436,3 +436,93 @@ a { color: inherit; text-decoration: none; }
 @media print {
   .print\:hidden { display: none; }
 }
+
+/* ===== Site-wide / Layout ===== */
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; }
+
+/* ===== Navbar hide on scroll ===== */
+#siteNav { transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease, opacity 0.35s ease; }
+.nav-hide { transform: translateY(-100%); box-shadow: none; }
+.nav-scrolled { background-color: rgba(255,255,255,0.97); }
+
+/* ===== Floating WhatsApp button ===== */
+.whatsapp-float {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #25d366;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 25px -5px rgba(37,211,102,0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float:hover { transform: scale(1.06); box-shadow: 0 16px 30px -6px rgba(37,211,102,0.7); }
+.whatsapp-float svg { width: 1.5rem; height: 1.5rem; flex-shrink: 0; }
+
+/* ===== Client / trust logo strip ===== */
+.client-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.1rem 1rem;
+  min-height: 4.5rem;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.client-tile:hover { border-color: #f97316; color: #f97316; box-shadow: 0 8px 20px -8px rgba(0,0,0,0.15); }
+.marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee-track { display: flex; gap: 1.5rem; width: max-content; animation: marquee 30s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ===== Testimonials ===== */
+.testimonial-card { position: relative; background: #fff; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.75rem; box-shadow: 0 8px 24px -12px rgba(0,0,0,0.12); }
+.testimonial-card::before { content: "\201C"; position: absolute; top: 0.4rem; left: 1.1rem; font-size: 3.5rem; line-height: 1; color: #f97316; opacity: 0.25; font-family: Georgia, serif; }
+
+/* ===== Product detail pages ===== */
+.spec-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.spec-table th, .spec-table td { border: 1px solid #e5e7eb; padding: 0.75rem 1rem; text-align: left; }
+.spec-table th { background: #f9fafb; font-weight: 700; color: #1a1a2e; }
+.spec-table tr:nth-child(even) td { background: #fafafa; }
+
+/* ===== Blog ===== */
+.blog-card .read-more { opacity: 0; transform: translateY(4px); transition: opacity 0.25s ease, transform 0.25s ease; }
+.blog-card:hover .read-more, .blog-card .read-more:focus { opacity: 1; transform: translateY(0); }
+.prose-block p { margin-bottom: 1rem; }
+.prose-block ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose-block ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose-block li { margin-bottom: 0.4rem; }
+.prose-block h3 { margin: 1.5rem 0 0.75rem; font-size: 1.35rem; }
+.prose-block h4 { margin: 1.25rem 0 0.5rem; font-size: 1.1rem; color: #f97316; }
+
+/* ===== Footer ===== */
+.footer-link { display: block; padding: 0.35rem 0; color: #d1d5db; font-size: 0.9rem; transition: color 0.2s ease, transform 0.2s ease; }
+.footer-link:hover { color: #f97316; transform: translateX(3px); }
+.social-btn { display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 9999px; background: rgba(255,255,255,0.08); color: #fff; transition: background 0.2s ease, transform 0.2s ease; }
+.social-btn:hover { background: #f97316; transform: translateY(-2px); color: #000; }
+
+/* ===== Accordion (FAQ) ===== */
+.faq-item summary { cursor: pointer; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; float: right; font-size: 1.4rem; font-weight: 700; color: #f97316; transition: transform 0.2s ease; }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+
+/* ===== Misc helpers ===== */
+.founder-avatar { border-radius: 9999px; border: 4px solid rgba(249,115,22,0.4); }
+.text-shadow { text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
